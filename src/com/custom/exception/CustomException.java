@@ -8,7 +8,7 @@ public class CustomException {
             me.printStackTrace();
         }
     }
-    public static void testException(String string) throws MyException{
+    public static void testException(String string) /*throws MyException*/ {
         /*if(string==null){
             throw new MyException("the string is null");
          }*/
@@ -20,7 +20,7 @@ public class CustomException {
         }
     }
 }
-class MyException extends RuntimeException{
+class MyException extends /*Exception*/RuntimeException{
     private static final long serialVersionUID = 1L;
     
     public MyException() {

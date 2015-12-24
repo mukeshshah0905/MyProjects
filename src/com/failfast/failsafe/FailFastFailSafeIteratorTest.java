@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class FailFastFailSafeIteratorTest {
     public static void main(String[] args) {
-       // failFast();
+        //failFast();
         failSaif();
     }
 
@@ -20,12 +20,15 @@ public class FailFastFailSafeIteratorTest {
         phones.put("Sony", "Xperia C3");
         phones.put("Samsung", "Galaxy S1");
         
-        Set<String> keys=phones.keySet();
+        for(String phone:phones.keySet()){
+            System.out.println(phones.get(phone));
+        }
+       /* Set<String> keys=phones.keySet();
         Iterator<String> it=keys.iterator();
         while(it.hasNext()){
             System.out.println(phones.get(it.next()));
             phones.put("Motorola", "Moto G");
-        }
+        }*/
     }
 
     public static void failSaif() {

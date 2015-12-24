@@ -1,6 +1,6 @@
 package com.singletonpattern;
 
-public class SingletonPattern  implements Cloneable{
+public class SingletonPattern {
     public static void main(String[] args) {
         Employee e1=Employee.getEmployee();
         Employee e2=Employee.getEmployee();
@@ -8,7 +8,7 @@ public class SingletonPattern  implements Cloneable{
     }
 }
 
-class Employee {
+class Employee implements Cloneable {
     
     private int empId=10;
     private String empName="Mukesh";
@@ -21,5 +21,9 @@ class Employee {
 
     public static Employee getEmployee() {
         return employee;
+    }
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return new CloneNotSupportedException();
     }
 }
